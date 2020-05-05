@@ -42,6 +42,7 @@ class Queue():
             print(cur.data, "<- rear")
 
 
+
 if __name__ == "__main__":
     q = Queue()
     q.push(1)
