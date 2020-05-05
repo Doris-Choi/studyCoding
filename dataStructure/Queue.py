@@ -44,7 +44,6 @@ class Queue():
             print(cur.data, "<- rear")
 
 
-
 if __name__ == "__main__":
     q = Queue()
     q.push(1)
@@ -52,6 +51,7 @@ if __name__ == "__main__":
     q.push(3)
     q.push(4)
     q.push(5)
+    print(q.count)
     q.show()
     q.pop()
     q.pop()
@@ -60,3 +60,4 @@ if __name__ == "__main__":
     q.pop()
     q.pop()
     q.show()
+    print(q.count)
