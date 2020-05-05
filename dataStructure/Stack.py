@@ -39,6 +39,7 @@ class Stack():
             print(cur.data)
 
 
+
 if __name__ == "__main__":
     s = Stack()
     s.push(1)
