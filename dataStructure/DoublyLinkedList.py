@@ -37,7 +37,7 @@ class DoublyLinkedList():
     # 맨 앞 자료 지우기
     def deleteFront(self):
         if self.head == None:
-            print("overflow")
+            print("empty List")
         else:
             self.head = self.head.next
             self.head.prev = None
@@ -45,7 +45,7 @@ class DoublyLinkedList():
     # 맨 뒤 자료 지우기
     def deleteEnd(self):
         if self.tail == None:
-            print("overflow")
+            print("empty List")
         else:
             self.tail = self.tail.prev
             self.tail.next = None
@@ -71,8 +71,6 @@ class DoublyLinkedList():
                 print(cur.data, '<->', end = ' ')
                 cur = cur.prev
             print(cur.data)
-
-
 
 
 if __name__ == "__main__":
