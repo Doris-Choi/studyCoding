@@ -145,7 +145,7 @@ class LinkedList:
         else:
             cur = self.head
             while cur.next:
-                print(cur.data, end=' ')
+                print(cur.data, '->', end=' ')
                 cur = cur.next
             print(cur.data)
 
