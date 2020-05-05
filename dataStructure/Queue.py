@@ -20,6 +20,7 @@ class Queue():
             while cur.next:
                 cur = cur.next
             cur.next = Node(data)
+            self.count += 1
 
     def pop(self):
         if self.front == None:
@@ -27,6 +28,7 @@ class Queue():
         else:
             cur = self.front
             self.front = cur.next
+            self.count -= 1
             print(cur.data)
             return cur.data
 
