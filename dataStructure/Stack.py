@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# stack.py
+# Stack.py
 
 class Node():
     def __init__(self, data):
