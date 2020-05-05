@@ -34,6 +34,23 @@ class DoublyLinkedList():
             self.tail.prev = cur
             cur.next = self.tail
 
+    # 맨 앞 자료 지우기
+    def deleteFront(self):
+        if self.head == None:
+            print("overflow")
+        else:
+            self.head = self.head.next
+            self.head.prev = None
+
+    # 맨 뒤 자료 지우기
+    def deleteEnd(self):
+        if self.tail == None:
+            print("overflow")
+        else:
+            self.tail = self.tail.prev
+            self.tail.next = None
+
+
     # print 리스트
     def showAll(self):
         if self.head == None:
@@ -64,3 +81,13 @@ if __name__ == "__main__":
     dl.insertFront(4)
     dl.showAll()
     dl.showReverse()
+    dl.insertEnd(5)
+    dl.showAll()
+    dl.showReverse()
+    dl.insertFront(6)
+    dl.insertEnd(7)
+    dl.showAll()
+    dl.deleteFront()
+    dl.showAll()
+    dl.deleteEnd()
+    dl.showAll()
