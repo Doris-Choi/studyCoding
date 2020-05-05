@@ -73,6 +73,7 @@ class DoublyLinkedList():
             print(cur.data)
 
 
+
 if __name__ == "__main__":
     dl = DoublyLinkedList()
     dl.insertFront(3)
