@@ -51,10 +51,31 @@ def counting_sort(arr):
         sorted_arr += [i] * bucket[i]
     return sorted_arr
 
+# 기수 정렬
+def radix_sort(arr):
+    # 가장 큰 수 찾기
+    max_value = arr[0]
+    for x in arr:
+        if x > max_value:
+            max_value = x
+    # 기수 정렬 start
+    exp = 1
+    while max_value//exp > 0:
+        bucket = [0] * 10
+        res = [0] * len(arr)
+        for x in arr: bucket[x//exp%10] += 1
+        for i in range(1,10): bucket[i] += bucket[i-1]
+        for i in range(len(arr)-1,-1,-1):
+            res[bucket[arr[i]//exp%10]-1] = arr[i]
+            bucket[arr[i]//exp%10] -= 1
+        arr = res
+        exp *= 10
+    return arr
+
 if __name__ == "__main__":
     # 입력 받기: 각 숫자를 '띄어쓰기'로 구분하여 입력 받은 후 리스트(arr)로 처리
     # arr = [int(x) for x in input().split(' ')]
-    arr = [3, 5, 1, 2, 9, 6, 4, 7, 5]
+    arr = [35, 5, 11, 2, 9, 65, 4, 734, 5]
     print(arr)
     # 선택 정렬 확인
     print("Selection Sort:", end = ' ')
@@ -77,5 +98,11 @@ if __name__ == "__main__":
     # 계수 정렬 확인
     print("Counting Sort:", end=' ')
     for n in counting_sort(arr):
+        print(n, end=' ')
+    print()
+
+    # 기수 정렬 확인
+    print("Radix Sort:", end=' ')
+    for n in radix_sort(arr):
         print(n, end=' ')
     print()
