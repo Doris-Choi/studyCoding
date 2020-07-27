@@ -1,11 +1,11 @@
 # studyCoding
 
-### Programming Languages I learned today📍
+## Programming Languages I learned Today😝
 ---------------------------------------------
-Languages
+### Languages🏀
 - JavaScript
 - Python
 ---------------------------------------------
-Scope
+### Scope⚽️
 - Data Structure
 - Algorithm
